@@ -1,4 +1,4 @@
-FROM 17-alpine3.14
+FROM node:lts-alpine
 
 EXPOSE 3000
 WORKDIR /src/bible-api-gateway
