@@ -36,7 +36,7 @@ if (process.env?.REDIS_PASSWORD && process.env?.REDIS_HOST) {
 }
 
 const onlyStatus200 = (req, res) => res.statusCode === 200
-const cacheSuccesses = cache('5 minutes', onlyStatus200)
+const cacheSuccesses = cache('300 days', onlyStatus200)
 
 const apiProvider = new BollsLife();
 
