@@ -1,4 +1,4 @@
-import {BibleGatewayAPI} from '../provider/bibleGateway';
+import {BibleGatewayAPI} from '../provider/BibleGateway';
 
 // test BibleGatewayAPI through jest
 describe('BibleGatewayAPI', () => {
