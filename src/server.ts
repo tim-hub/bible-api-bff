@@ -3,7 +3,7 @@ import * as express from 'express';
 import { Request } from 'express';
 import { BollsLife } from './provider/BollsLife';
 
-const port = process.env.PORT ? process.env.PORT : 3000;
+const port = 3000;
 const app = express();
 const apiProvider = new BollsLife();
 
