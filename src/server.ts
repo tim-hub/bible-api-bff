@@ -2,7 +2,7 @@ import 'dotenv/config';
 import * as express from 'express';
 import { Request } from 'express';
 import { BollsLife } from './provider/BollsLife';
-import apicache from 'apicache';
+import * as apicache from 'apicache';
 import { createClient } from 'redis'
 
 const port = 3000;
