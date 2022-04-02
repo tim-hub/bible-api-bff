@@ -2,18 +2,21 @@ import 'dotenv/config';
 import * as express from 'express';
 import { Request } from 'express';
 import { BollsLife } from './provider/BollsLife';
+import compression from 'compression';
 
 const port = 3000;
 const app = express();
-const apiProvider = new BollsLife();
 
+app.use(compression())
+app.use(express.json());
+app.use(express.urlencoded({extended: false}))
 
 app.use((req, res, next) => {
   res.header('Access-Control-Allow-Origin', 'app://obsidian.md');
   next();
 });
-app.use(express.json());
-app.use(express.urlencoded({extended: false}))
+
+const apiProvider = new BollsLife();
 
 app.get('/bolls-life/:version/:book/:chapter',
   async (req: Request, res) => {
