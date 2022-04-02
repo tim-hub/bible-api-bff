@@ -2,14 +2,12 @@ import 'dotenv/config';
 import * as express from 'express';
 import { Request } from 'express';
 import { BollsLife } from './provider/BollsLife';
-import compression from 'compression';
 import apicache from 'apicache';
 import { createClient } from 'redis'
 
 const port = 3000;
 const app = express();
 
-app.use(compression())
 app.use(express.json());
 app.use(express.urlencoded({extended: false}))
 
